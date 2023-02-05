@@ -1,11 +1,635 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    Главная
-</head>
-<body>
+<!doctype html>
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap&subset=cyrillic-ext" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="{% static 'dentistry/style.css' %}" type="text/css"/>
+        <title>Стоматология</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container _container">
+                    <a href="" class="header__logo">
+                        <img src="{% static 'dentistry/foto/stomat_elizaveta_logo_white.webp' %}">
+                    </a>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="" class="menu__link">О нас</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Услуги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Специалисты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Галерея</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Контакты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="tel:+79085468545" class="menu__link">+78568456585</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="page">
+                <div class="page__main-block main-block">
+                    <div class="main-block__container _container">
+                        <div class="mine-block__body">
+                            <h1 class="main-block__title element-animation">Первый осмотр врачем и консультация - бесплатно</h1>
+                            <div class="main-block__text element-animation">Стоматология Елизавета оптимальный выбор людей в городе Омск для лечения и профилактики зубов. Низкие цены, гарантия и высокое качество оказываемых услуг – это то, за что нас любят наши клиенты!</div>
+                            <div class="main-block__buttons">
+                                <a href="" class="main-block__button-blue">Записаться на консультацию</a>
+                                <a href="" class="main-block__button-light">Прайс</a>
+                            </div>
+                            <div class="main-block__location">
+                                <div class="main-block__location-logo">
+                                    <img src="{% static 'dentistry/foto/icon-location.png' %}" alt="icon-location">
+                                </div>
+                                <div class="main-block__location-text"><p>Омск, ул. 12 Декабря, 60 <br> пн-пт 9:00–20:00; сб 9:00–17:00</p></div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="main-block__image _ibg">
+                        <img src="{% static 'dentistry/foto/avafon.jpg' %}" alt="ava">   
+                    </div>
+                    <div class="main-block__image1"></div>
+                </div>
+                <section class="page__about about">
+                    <div class="about__container _container">
+                        <div class="about__header header-block">
+                            <h2 class="header-block__title element-animation">О стоматологии Елизавета</h2>
+                            <div class="header-block__sub-title"></div>
+                        </div>
+                        <div class="about__body">
+                            <div class="about__image">
+                                <img src="{% static 'dentistry/foto/about.jpg' %}" alt="about">
+                            </div>
+                            <div class="about__content element-animation">
+                                <h2 class="about__title">Мы посвящаем себя <br> вашей улыбке!</h2>
+                                <div class="about__items">
+                                    <div class="about__item item-about">
+                                        <div class="item-about__icon"> <img src="{% static 'dentistry/foto/tooth.png' %}" alt="tooth"> </div>
+                                        <div class="item-about__text">Здоровье своих зубов стоит доверять профессионалам. В стоматологической клинике Елизавета в городе Омск, вы получите необходимое лечение</div>
+                                    </div>
+                                </div>
+                                <div class="about__items">
+                                    <div class="about__item item-about">
+                                        <div class="item-about__icon"> <img src="{% static 'dentistry/foto/doctor.png' %}" alt="doctor"> </div>
+                                        <div class="item-about__text">Если вам необходимо терапевтическое лечение  зубов, протезирование, имплантация или хирургия в клинике Елизавета вы найдете специалистов с соответствующим опытом</div>
+                                    </div>
+                                </div>
+                                <div class="about__items">
+                                    <div class="about__item item-about">
+                                        <div class="item-about__icon"> <img src="{% static 'dentistry/foto/sale.png' %}" alt="sale"> </div>
+                                        <div class="item-about__text">Мы держим цены на доступном уровне</div>
+                                    </div>
+                                </div>
+                            </div>
 
-</body>
-</html>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__pract pract">
+                    <div class="pract__container _container">
+                        <div class="pract__header header-block">
+                            <h2 class="header-block__title-white element-animation">Услуги стоматологии</h2>
+                            <div class="header-block__sub-title element-animation">Стоматология Елизавета оптимальный выбор людей в городе Омск для лечения и профилактики зубов.<br>Низкие цены, гарантия и высокое качество оказываемых услуг – это то, за что нас любят наши клиенты!</div>
+                        </div>
+                        <div class="pract__body">
+                            <div class="pract__column element-animation">
+                                <article class="pract__item item-pract">
+                                    <div class="item-pract__content">
+                                        <a href="" class="item-pract__link">
+                                            <h4 class="item-pract__title">ПРОТЕЗИРОВАНИЕ</h4>
+                                        </a>
+                                        <div class="item-pract__text">Услуги протезирования в Омске</div>
+
+                                    </div> 
+                                    <div class="main-block__buttons">
+                                        <a href="" class="main-block__button-white">подробнее</a>
+                                    </div>   
+                                    <a href="" class="item-pract__image _ibg">
+                                        <img src="{% static 'dentistry/foto/card1.jpg' %}" alt="">
+                                    </a>
+                                    
+                                </article>
+                            </div>
+                            <div class="pract__column element-animation">
+                                <article class="pract__item item-pract">
+                                    <div class="item-pract__content">
+                                        <a href="" class="item-pract__link">
+                                            <h4 class="item-pract__title">ИМПЛАНТАЦИЯ И ХИРУРГИЯ</h4>
+                                        </a>
+                                        <div class="item-pract__text">Услуги имплантации и хирургии в Омске</div>
+
+                                    </div>
+                                    <div class="main-block__buttons">
+                                        <a href="" class="main-block__button-white">подробнее</a>
+                                    </div>    
+                                    <a href="" class="item-pract__image _ibg">
+                                        <img src="{% static 'dentistry/foto/card2.jpg' %}" alt="">
+                                    </a>
+                                    
+                                </article>
+                            </div>
+                            <div class="pract__column element-animation">
+                                <article class="pract__item item-pract">
+                                    <div class="item-pract__content">
+                                        <a href="" class="item-pract__link">
+                                            <h4 class="item-pract__title">ЛЕЧЕНИЕ ЗУБОВ</h4>
+                                        </a>
+                                        <div class="item-pract__text">Лечение зубов с гарантией в Омске</div>
+
+                                    </div>  
+                                    <div class="main-block__buttons">
+                                        <a href="" class="main-block__button-white">подробнее</a>
+                                    </div>  
+                                    <a href="" class="item-pract__image _ibg">
+                                        <img src="{% static 'dentistry/foto/card3.jpg' %}" alt="">
+                                    </a>
+                                    
+                                </article>
+                            </div>
+                            <div class="pract__column element-animation">
+                                <article class="pract__item item-pract">
+                                    <div class="item-pract__content">
+                                        <a href="" class="item-pract__link">
+                                            <h4 class="item-pract__title">ЗАКАЗАТЬ ЗВОНОК</h4>
+                                        </a>
+                                        <div class="item-pract__text">Заказать бесплатный звонок</div>
+
+                                    </div>
+                                    <div class="main-block__buttons">
+                                        <a href="" class="main-block__button-white">перезвоните мне</a>
+                                    </div>    
+                                    <a href="" class="item-pract__image _ibg">
+                                        <img src="{% static 'dentistry/foto/card1.jpg' %}" alt="">
+                                    </a>
+                                    
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {box-sizing: border-box}
+                body {font-family: Verdana, sans-serif; margin:0}
+                .mySlides {display: none}
+                img {vertical-align: middle;}
+                /* Slideshow container */
+                .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+                margin-top: 50px;
+                }
+                /* Next & previous buttons */
+                .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                }
+                /* Position the "next button" to the right */
+                .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+                }
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+                }
+                /* Caption text */
+                .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+                }
+                /* Number text (1/3 etc) */
+                .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+                }
+                /* The dots/bullets/indicators */
+                .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+                }
+                .active, .dot:hover {
+                background-color: #717171;
+                }
+                /* Fading animation */
+                .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+                }
+                @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+                }
+                @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+                }
+                /* On smaller screens, decrease text size */
+                @media only screen and (max-width: 300px) {
+                .prev, .next,.text {font-size: 11px}
+                }
+                </style>
+                </head>
+                <body>
+                <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 6</div>
+                <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 6</div>
+                <img src="{% static 'dentistry/foto/card2.jpg' %}" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 6</div>
+                <img src="{% static 'dentistry/foto/card1.jpg' %}" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="{% static 'dentistry/foto/card2.jpg' %}" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="{% static 'dentistry/foto/card1.jpg' %}" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
+
+                </body>
+                </html> 
+                
+
+                <section class="doctor doctor">
+                    <div class="doctor__header header-block">
+                        <h2 class="header-block__title-white element-animation">Сотрудники</h2>
+                    </div>
+                    <div class="doctor-container element-animation _container">
+                        <div class="doctor-box">
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                        </div> 
+                        <div class="doctor-box">
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                        </div>   
+                        
+                    </div>
+                    <div class="doctor-container element-animation _container">
+                        <div class="doctor-box">
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                        </div> 
+                        <div class="doctor-box">
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                            <div class="doctor-card">
+                                <div class="doctor-photo__image">
+                                    <img src="{% static 'dentistry/foto/doc.png' %}" alt="doc">
+                                </div>
+                                <h4 class="doctor-card__title">Слесарчук Елена Владимировна</h4>
+                                <div class="doctor-card__text">Стоматолог</div>
+                            </div>
+                        </div>   
+                        
+                    </div>
+                    
+                    
+                </section>
+
+                
+                           
+
+
+
+
+
+
+
+
+                <section class="page__price price">
+                    <div class="price__container _container">
+                        <div class="price__header header-block">
+                            <h2 class="header-block__title element-animation">Протезирование зубов</h2>
+                            <div class="header-block__sub-title-black element-animation">Мы знаем, как важно вовремя делать протезирование зубов, почему это так важно сделать в срок. После удаления зуба или зубов, возникшее пустое место провоцирует смещением остальных целых зубов, приводя к развитию неправильного прикуса и формированию щелей в здоровых зубах. Нагрузка на костную ткань уменьшается, что в последствии уменьшает толщину челюстно-лицевой структуры лица, появление морщин, нагрузка на пережевывание пищи распределяется неправильно что в будущем будет проявлением новых дефектов.</div>
+                        </div> 
+                        <div class="price__body">
+                            <div class="price__column">
+                                <div class="price__content">
+                                    <div class="content__name">Коронка цельнолитая</div>
+                                    <div class="content__money">1200</div>
+                                </div>
+                                <div class="price__content1">
+                                    <div class="content__name">Коронка металлокерамическая</div>
+                                    <div class="content__money">1520</div>
+                                </div>
+                                <div class="price__content">
+                                    <div class="content__name">Коронка временная</div>
+                                    <div class="content__money">7120</div>
+                                </div>
+                                <div class="price__content1">
+                                    <div class="content__name">Коронка на диоксиде циркония</div>
+                                    <div class="content__money">120</div>
+                                </div>
+                                <div class="price__content">
+                                    <div class="content__name">Коронка из прессованной керамики ЕМАХ</div>
+                                    <div class="content__money">12000</div>
+                                </div>
+                                <div class="price__content1">
+                                    <div class="content__name">Винир керамический</div>
+                                    <div class="content__money">120</div>
+                                </div>
+                                <div class="price__content">
+                                    <div class="content__name">Вкладка керамическая</div>
+                                    <div class="content__money">1020</div>
+                                </div>
+                                <div class="price__content1">
+                                    <div class="content__name">Коронка металлокерам. на импланте OSSТЕМ/ MiS</div>
+                                    <div class="content__money">52000</div>
+                                </div>
+                                <div class="price__content">
+                                    <div class="content__name">Коронка цельнолитая на импланте</div>
+                                    <div class="content__money">1204</div>
+                                </div>
+                                <div class="price__content1">
+                                    <div class="content__name">Бюгельный протез на аттачменах</div>
+                                    <div class="content__money">1207</div>
+                                </div>
+                                <div class="price__content">
+                                    <div class="content__name">Коронка на импл.</div>
+                                    <div class="content__money">120</div>
+                                </div>
+                                <div class="price__content1">
+                                    <div class="content__name">Металлокер/цельнолит</div>
+                                    <div class="content__money">120</div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </section>
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                        <h1>Contact Form</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime repellat asperiores natus unde quos consequuntur aliquid temporibus doloremque nihil nulla quidem, expedita hic nobis ipsam quia fugiat. Sunt, maxime, fugit!</p>
+                   
+                        <div class="popup-overlay"><!-- //оверлей - отображение формы на затемненном фоне -->
+                   
+                          <div class="popWindow subscribe_window"><!-- //основное окно формы Подписки -->
+                            <p class="subcsribe-text">Subscribe to receive news and information</p>
+                            <form class="subscribe-form" autocomplete="off">
+                              <div>
+                                <input type="text" id="name-subscribe" name="Name" placeholder=" " required>
+                                <label for="name-subscribe">Name <span>*</span></label>
+                              </div>
+                              <div>
+                                <input type="email" id="email-subscribe" name="E-mail" placeholder=" " required>
+                                <label for="email-subscribe">Email <span>*</span></label>
+                              </div>
+                              <div class="aligncenter">
+                                <button type="submit" class="btn"><i class="fa fa-check" aria-hidden="true"></i> Subscribe</button>
+                              </div>
+                              <div class="req-fields"><sup>*</sup> required fields</div>
+                            </form>
+                            <div class="close-btn">&times;</div>
+                          </div><!-- /subscribe_window -->
+                   
+                          <div class="popWindow thank_you_window"><!-- //благодарственное окно после успешной отправки формы -->
+                            <p class="thank_you_title">Thank you for subscribing!</p>
+                            <p class="thank_you_body">We've sent some useful tips to your email. Go ahead and check them now!</p>
+                            <div class="close-btn">&times;</div>
+                          </div><!-- /thank_you_window -->
+                   
+                        </div><!-- /popup-overlay -->
+                   
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                <section class="page__map map">
+                    <div class="map__container _container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3bdb1b14f7c6e29d9e4c994c3ade4edd47640ae59541ef2fa281ed1b739ccfdf&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                </section>        
+            </main>
+            <footer class="footer">
+                <div class="footer__top">
+                    <div class="footer__main _container">
+                        <div class="footer__column">
+                            <div class="footer__label">
+                                <a href="" class="footer__logo">
+                                    <img src="{% static 'dentistry/foto/stomat_elizaveta_logo_white.webp' %}">
+                                </a>
+                            </div>
+                            <nav class="footer__menu menu-footer">
+                                <div class="footer-block__buttons">
+                                    <a href="" class="footer-block__button-footer">перезвоните мне</a>
+                                    <a href="" class="footer-block__button-footer">записаться<br>на консультацию</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__label">Навигация</div>
+                            <nav class="footer__menu menu-footer">
+                                <ul class="menu-footer__list">
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">О нас</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Услуги</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Специалисты</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Галерея</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Прайс</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__label">Контакты</div>
+                            <nav class="footer__menu menu-footer">
+                                <ul class="menu-footer__list">
+                                    <a href="tel:+79085468545" class="footer__tel">+78568456585</a>
+                                    <li class="menu-footer__item">Россия, г. Омск, ул. 12 Декабря, 60<br>пн-пт 9:00–20:00; сб 9:00–17:00</li>
+                                </ul>
+                                <div class="footer__contacts contacts-footer">
+                                    <a href="https://vk.com/elizavetastom" class="contacts-footer__item contacts-footer__item_vk">
+                                        <img src="{% static 'dentistry/foto/icon-vk.png' %}" alt="">
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="{% static 'dentistry/script.js' %}"></script>
+    </body>
+</html>   
