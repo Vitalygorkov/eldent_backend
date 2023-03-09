@@ -9,6 +9,7 @@
 a {
     text-decoration: none;
 }
+
 ul,
 ol,
 li {
@@ -34,6 +35,9 @@ body {
     color: #000;
     font-family: Montserrat;
     font-weight: 500;
+}
+body._lock{
+    overflow: hidden; /*недает скролить весь сайт при открытой меню*/
 }
 .wrapper {
     min-height: 100%;
@@ -81,11 +85,12 @@ body {
   }
 /*------------ШАПКА--------------------------*/ 
 .header {
-    position: absolute;
+    /*position: absolute;
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 50;
+    z-index: 50;*/
+    margin-top: 400px;
 }
 .header__container {
     display: flex;
@@ -129,12 +134,6 @@ body {
 /*------------page--------------------------*/ 
 .page {
 flex: 1 1 auto;
-}
-.page__about {
-
-}
-.page__pract {
-
 }
 /*------------heder-block--------------------------*/
 .header-block {
@@ -958,50 +957,24 @@ button-write img
     }  
 }
 /*-----------------модалка---------------------------------*/
-
-.popup-overlay {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 186, 0, 0.7);
-    z-index: 100;
-  }
-   
+.container-popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   /* Основные стили для всплывающего окна */
   .popWindow{
-    display: none;
-    background-color: #161613;
+    background-color: #67909c;
     color: #fff;
-    width: 90%;
-    max-width: 720px;
     padding: 40px 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -360px;
-    margin-top: -185px;
     text-align: center;
     box-shadow: 0 0 30px rgba(18, 17, 12, 0.5);
   }
   /* Стили для адаптивности всплывающего окна */
   @media only screen and (max-width : 800px) {
     .popWindow {
-      margin-left: -45%;
+      
     }
-  }
-  /* Кнопка закрыть всплывающее окно */
-  .close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 40px;
-    line-height: 20px;
-    cursor: pointer;
-    color: #999;
-    padding: 10px;
   }
   /* Просто текст */
   .subscribe_window .subcsribe-text {
@@ -1016,7 +989,7 @@ button-write img
   }
   /* Текст */
   .subscribe_window .req-fields {
-    color: #676767;
+    color: #ffffff;
     text-align: left;
   }
   /* Стили формы */
@@ -1029,7 +1002,7 @@ button-write img
     position: relative;
   }
   .subscribe-form input {
-    border: 1px solid #3d3d3d;
+    border: 1px solid #000000;
     width: 100%;
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -1037,17 +1010,17 @@ button-write img
     padding: 5px 20px;
     margin-bottom: 20px;
     outline: none;
-    background: #2e2e2b;
+    background: #48646d;
     color: #fff;
     border-radius: 4px;
   }
   .btn {
     color: #161613;
-    background-color: #ffba00;
+    background-color: #ffffff;
     padding: 10px 50px;
     text-align: center;
     font-size: 13px;
-    border: 1px solid #ffba00;
+    border: 1px solid #000000;
     box-shadow: none;
     display: inline-block;
     text-transform: uppercase;
@@ -1073,7 +1046,7 @@ button-write img
     border-radius: 4px;
   }
   .subscribe-form .btn:hover {
-    background-color: #e6a700;
+    background-color: #6fbbd2;
   }
   .subscribe-form .btn i {
     font-size: 28px;
@@ -1088,7 +1061,7 @@ button-write img
     transition: 0.28s;
   }
   .subscribe-form label span {
-    color: #ffba00;
+    color: #ffffff;
   }
   .subscribe-form input:focus + label {
     left: -62px;
@@ -1101,13 +1074,6 @@ button-write img
     border: 1px solid #161613;
   }
   .subscribe-form input:valid + label {
-    left: -62px;
-    font-size: 12px;
-  }
-  .subscribe-form input:invalid:not(:focus):not(:placeholder-shown) {
-    border: 1px solid #d3362a;
-  }
-  .subscribe-form input:invalid:not(:focus):not(:placeholder-shown) + label {
     left: -62px;
     font-size: 12px;
   }
@@ -1132,20 +1098,316 @@ button-write img
       top: -18px;
     }
   }
-   
-  /* Стили для текста внутри благодарственного окна после успешной отправки */
-  .thank_you_window .thank_you_title {
-    font-family: "Titillium Web", sans-serif;
-    color: #fff;
-    font-size: 32px;
-    line-height: 50px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .thank_you_window .thank_you_body {
-    font-family: "Titillium Web", sans-serif;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 400;
-  }
+/*-----------------слайдер---------------------------------*/
+* {box-sizing: border-box}
+                body {font-family: Verdana, sans-serif; margin:0}
+                .mySlides {display: none}
+                img {vertical-align: middle;}
+                /* Slideshow container */
+                .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+                margin-top: 50px;
+                }
+                /* Next & previous buttons */
+                .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                }
+                /* Position the "next button" to the right */
+                .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+                }
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+                }
+                /* Caption text */
+                .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+                }
+                /* Number text (1/3 etc) */
+                .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+                }
+                /* The dots/bullets/indicators */
+                .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+                }
+                .active, .dot:hover {
+                background-color: #717171;
+                }
+                /* Fading animation */
+                .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+                }
+                @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+                }
+                @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+                }
+                /* On smaller screens, decrease text size */
+                @media only screen and (max-width: 300px) {
+                .prev, .next,.text {font-size: 11px}
+                }
 
+
+
+/*-----------------меню---новое---------------------------------*/
+.headera{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #67909c;
+}
+.headera__container{
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    padding: 0px 30px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+.headera__logo{
+    /*border-radius: 50%;
+    background-color: #fff;*/
+    position: relative;
+    z-index: 5;
+    /*width: 40px;
+    height: 40px;*/
+    width: 100%;
+    max-width: 245px;
+}
+.headera__logo img{
+    width: 50%;
+    min-width: 240px;
+    max-width: 245px;
+}
+@media (max-width: 350px) {
+    .headera__logo{
+        max-width: 215px;
+    }
+    .headera__logo img{
+        min-width: 210px;
+        max-width: 215px;
+    }
+}
+.menu__icona{
+    display: none;
+}
+.menu__lista > li {
+    position: relative;
+    margin: 0px 0px 0px 20px;
+}
+.menu__linka{
+    color: #ffffff;
+    font-size: 14px;
+}
+.menu__linka:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+.menu__sub-lista{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000000;
+    padding: 15px;
+    min-width: 200px;
+}
+.menu__sub-lista li{
+    margin: 0px 0px 10px 0px;
+}
+.menu__sub-lista li:last-child {
+    margin: 0;
+}
+.menu__sub-linka{
+    color: #ffffff;
+}
+.menu__sub-linka:hover{
+    text-decoration: underline;
+}
+.menu__arrowa{
+    display: none;
+}
+/*---------------------------------------*/
+body._pc .menu__lista > li:hover .menu__sub-lista {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: all;
+}
+body._touch .menu__lista > li {
+    display: flex;
+    align-items: center;
+}
+body._touch .menu__linka {
+    flex: 1 1 auto;
+    color: #ffffff;
+}
+body._touch .menu__arrowa {
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0px 0px 0px 5px;
+    transition: transform 0.3s ease 0s;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #fff;
+}
+body._touch .menu__lista > li._active .menu__sub-lista {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: all;
+}
+body._touch .menu__lista > li._active .menu__arrowa {
+    transform: rotate(-180deg);
+}
+/*---------------------------------------*/
+@media (min-width: 767px) {
+    .menu__lista{
+        display: flex;
+        align-items: center;
+    }
+    .menu__lista > li {
+        padding: 10px 0;
+    }
+    .menu__sub-lista{
+        transform: translate(0px, 10%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease 0s;
+    }
+}
+@media (max-width: 767px) {
+    .menu__icona {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menu__icona span,
+    .menu__icona::before,
+    .menu__icona::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+    }
+    .menu__icona::before,
+    .menu__icona::after {
+        content: "";
+    }
+    .menu__icona::before{
+        top: 0;
+    }
+    .menu__icona::after{
+        bottom: 0;
+    }
+    .menu__icona span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .menu__icona._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menu__icona._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu__icona._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    .menu__bodya{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #67909ce0;
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu__bodya._active {
+        left: 0;
+    }
+    .menu__bodya::before{
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70px;
+        background-color: #67909c;
+        z-index: 2;
+    }
+    .menu__lista > li {
+        flex-wrap: wrap;
+        margin: 0px 0px 20px 0px;
+    }
+    .menu__lista > li:last-child {
+        margin-bottom: 0;
+    }
+    .menu__lista > li._active .menu__sub-lista{
+        display: block;
+    }
+    .menu__linka {
+        font-size: 30px;
+    }
+    .menu__sub-lista {
+        position: relative;
+        background-color: #fff;
+        flex: 1 1 100%;
+        margin: 15px 0px 0px 0px;
+        display: none;
+    }
+    .menu__sub-linka {
+        font-size: 20px;
+        color: #000;
+    }
+}
