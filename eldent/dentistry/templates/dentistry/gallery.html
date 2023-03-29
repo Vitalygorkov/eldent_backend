@@ -1,0 +1,18 @@
+{% extends 'dentistry/base.html' %}
+{% load static %}
+{% block content %}
+
+{% for photo in photo_list %}
+
+
+{{ photo.name }}
+<img src="/media/{{ photo.image }}">
+
+
+
+{% endfor %}
+
+
+
+        <script src="{% static 'dentistry/script.js' %}"></script>
+{% endblock %}
