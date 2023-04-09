@@ -13,7 +13,6 @@
     <title>Стоматология</title>
 </head>
 <body>
-
 <div class="wrapper">
     <header class="headera">
         <div class="headera__container">
@@ -24,12 +23,12 @@
                 </div>
                 <nav class="menu__bodya">
                     <ul class="menu__lista">
-                        <li><a href="/about_us" class="menu__linka">О нас</a></li>
+                        <li><a href="/about_us" class="menu__linka">Записаться</a></li>
                         <li><a href="/price" class="menu__linka">Прайс</a></li>
                         <li><a href="/doctors" class="menu__linka">Специалисты</a></li>
                         <li><a href="/gallery" class="menu__linka">Галерея</a></li>
                         <li>
-                            <a href="" class="menu__linka">Контакты</a>
+                            <a href="#bottom" id="top" class="menu__linka">Контакты</a>
                         </li>
                         <li>
                             <div class="menu-tel-box">
@@ -37,13 +36,14 @@
                                 <a href="tel:+79045841156" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">89045841156</a>
                             </div>
                         </li>
+                        <li class="versia"><img id="specialButton" style="cursor:pointer;" src="https://lidrekon.ru/images/special.png" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" />Версия для слабовидящих</li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-
+    
 {% block content %}
 {% endblock %}
 
@@ -58,8 +58,8 @@
                     </div>
                     <nav class="footer__menu menu-footer">
                         <div class="footer-block__buttons">
-                            <a href="" class="footer-block__button-footer">перезвоните мне</a>
-                            <a href="" class="footer-block__button-footer">записаться<br>на консультацию</a>
+                            <a href="/about_us" class="footer-block__button-footer">перезвоните мне</a>
+                            <a href="/about_us" class="footer-block__button-footer">записаться<br>на консультацию</a>
                         </div>
                     </nav>
                 </div>
@@ -67,7 +67,7 @@
                     <div class="footer__label">Навигация</div>
                     <nav class="footer__menu menu-footer">
                         <ul class="menu-footer__list">
-                            <li class="menu-footer__item"><a href="/about_us" class="menu-footer__link">О нас</a></li>
+                            <li class="menu-footer__item"><a href="/about_us" class="menu-footer__link">Записаться</a></li>
                             <li class="menu-footer__item"><a href="/doctors" class="menu-footer__link">Специалисты</a></li>
                             <li class="menu-footer__item"><a href="/gallery" class="menu-footer__link">Галерея</a></li>
                             <li class="menu-footer__item"><a href="/price" class="menu-footer__link">Прайс</a></li>
@@ -75,15 +75,14 @@
                     </nav>
                 </div>
                 <div class="footer__column">
-                    <div class="footer__label">Контакты</div>
+                    <a href="#top" id="bottom"><div class="footer__label">Контакты</div></a>
                     <nav class="footer__menu menu-footer">
                         <ul class="menu-footer__list">
                             <div class="menu-tel-box">
                                 <a href="tel:+73812501724" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">83812501724</a>
                                 <a href="tel:+79045841156" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">89045841156</a>
                             </div>
-                            <!-- <a href="tel:+79085468545" class="footer__tel">+78568456585</a> -->
-                            <li class="menu-footer__item">Россия, г. Омск, ул. 12 Декабря, 60<br>пн-пт 9:00–20:00; сб 9:00–17:00</li>
+                            <li class="menu-footer__item">Россия, г. Омск, ул. 12 Декабря, 56, пом.7<br>пн-пт 9:00–19:00; сб 9:00–17:00</li>
                         </ul>
                         <div class="footer__contacts contacts-footer">
                             <a href="https://vk.com/elizavetastom" class="contacts-footer__item contacts-footer__item_vk">
@@ -98,5 +97,8 @@
 </div>
 
             <script src="{% static 'dentistry/script.js' %}"></script>
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+            <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
 </body>
 </html>

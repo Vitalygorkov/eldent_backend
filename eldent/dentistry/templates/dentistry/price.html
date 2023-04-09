@@ -3,65 +3,46 @@
 {% block content %}
 <section class="page__price price">
     <div class="price__container _container">
+
+        
+        <div class="way-box _container">
+
+            <div class="category_path">
+                <a href="/">Главная</a>
+            </div>
+
+            <div class="category_path">
+                <img src="{% static 'dentistry/foto/right-arrow.png' %}" alt="">
+                <a href="#">Прайс</a>
+            </div>
+        </div>
+
+
+
         <div class="price__header header-block">
-            <h2 class="header-block__title element-animation">Протезирование зубов</h2>
-            <div class="header-block__sub-title-black element-animation">Мы знаем, как важно вовремя делать протезирование зубов, почему это так важно сделать в срок. После удаления зуба или зубов, возникшее пустое место провоцирует смещением остальных целых зубов, приводя к развитию неправильного прикуса и формированию щелей в здоровых зубах. Нагрузка на костную ткань уменьшается, что в последствии уменьшает толщину челюстно-лицевой структуры лица, появление морщин, нагрузка на пережевывание пищи распределяется неправильно что в будущем будет проявлением новых дефектов.</div>
+            <h2 class="header-block__title">Протезирование</h2>
+            <h2 class="header-block__title">Имплантация и хирургия</h2>
+            <h2 class="header-block__title">Лечение зубов</h2>
         </div>
         <div class="price__body">
+            
             <div class="price__column">
+
                 {% for price in price_list %}
                 <div class="price__{% cycle 'content' 'content1'  %}">
                     <div class="content__name">{{ price.name }}</div>
                     <div class="content__money">{{ price.price }}</div>
                 </div>
                 {% endfor %}
-<!--                <div class="price__content1">-->
-<!--                    <div class="content__name">Коронка металлокерамическая</div>-->
-<!--                    <div class="content__money">1520</div>-->
-<!--                </div>-->
-<!--                <div class="price__content">-->
-<!--                    <div class="content__name">Коронка временная</div>-->
-<!--                    <div class="content__money">7120</div>-->
-<!--                </div>-->
-<!--                <div class="price__content1">-->
-<!--                    <div class="content__name">Коронка на диоксиде циркония</div>-->
-<!--                    <div class="content__money">120</div>-->
-<!--                </div>-->
-<!--                <div class="price__content">-->
-<!--                    <div class="content__name">Коронка из прессованной керамики ЕМАХ</div>-->
-<!--                    <div class="content__money">12000</div>-->
-<!--                </div>-->
-<!--                <div class="price__content1">-->
-<!--                    <div class="content__name">Винир керамический</div>-->
-<!--                    <div class="content__money">120</div>-->
-<!--                </div>-->
-<!--                <div class="price__content">-->
-<!--                    <div class="content__name">Вкладка керамическая</div>-->
-<!--                    <div class="content__money">1020</div>-->
-<!--                </div>-->
-<!--                <div class="price__content1">-->
-<!--                    <div class="content__name">Коронка металлокерам. на импланте OSSТЕМ/ MiS</div>-->
-<!--                    <div class="content__money">52000</div>-->
-<!--                </div>-->
-<!--                <div class="price__content">-->
-<!--                    <div class="content__name">Коронка цельнолитая на импланте</div>-->
-<!--                    <div class="content__money">1204</div>-->
-<!--                </div>-->
-<!--                <div class="price__content1">-->
-<!--                    <div class="content__name">Бюгельный протез на аттачменах</div>-->
-<!--                    <div class="content__money">1207</div>-->
-<!--                </div>-->
-<!--                <div class="price__content">-->
-<!--                    <div class="content__name">Коронка на импл.</div>-->
-<!--                    <div class="content__money">120</div>-->
-<!--                </div>-->
-<!--                <div class="price__content1">-->
-<!--                    <div class="content__name">Металлокер/цельнолит</div>-->
-<!--                    <div class="content__money">120</div>-->
-<!--                </div>-->
-            </div>
+
+                <div class="main-block__buttons _container">
+                    <a href="/" class="main-block__button-white">НАЗАД</a>
+                </div>
+
+            </div>  
+
         </div>
     </div>
 </section>
-        <script src="{% static 'dentistry/script.js' %}"></script>
+
 {% endblock %}

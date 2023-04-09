@@ -6,7 +6,7 @@ def index(request):
     print('index')
     doctor_list = Doctor.objects.all()
     price_list = Services.objects.all()
-    photo_list = Doctor.objects.all()
+    photo_list = Galery_photo.objects.all()
     context = {
         'doctor_list': doctor_list,
         'price_list': price_list,
@@ -24,14 +24,14 @@ def price(request):
 
 def doctors(request):
     print('doctors')
-    doctor_list = Galery_photo.objects.all()
+    doctor_list = Doctor.objects.all()
     context = {
         'doctor_list': doctor_list,
     }
     return render(request, 'dentistry/doctors.html', context)
 def gallery(request):
     print('gallery')
-    photo_list = Doctor.objects.all()
+    photo_list = Galery_photo.objects.all()
     context = {
         'photo_list': photo_list,
     }

@@ -2,17 +2,50 @@
 {% load static %}
 {% block content %}
 
-{% for photo in photo_list %}
 
-
-{{ photo.name }}
-<img src="/media/{{ photo.image }}">
+<div class="galery">
 
 
 
-{% endfor %}
 
 
+    <div class="slideshow-container">
 
-        <script src="{% static 'dentistry/script.js' %}"></script>
+        <div class="way-box _container">
+
+            <div class="category_path">
+                <a href="/">Главная</a>
+            </div>
+        
+            <div class="category_path">
+                <img src="{% static 'dentistry/foto/right-arrow.png' %}" alt="">
+                <a href="#">Галерея</a>
+            </div>
+        </div>
+
+        {% for photo in photo_list %}
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <!-- <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> -->
+                <img src="/media/{{ photo.image }}" style="width:100%">
+            </div>
+        {% endfor %}
+
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+            <br>
+    <div style="text-align:center">
+            {% for photo in photo_list %}
+            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+            {% endfor %}
+    </div>
+</div>
+
+<div class="main-block__buttons ">
+    <a href="/" class="main-block__button-big">НАЗАД</a>
+</div>
+<script src="{% static 'dentistry/slider.js' %}"></script>
+
 {% endblock %}
