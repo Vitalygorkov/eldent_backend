@@ -29,20 +29,37 @@ class Doctor(models.Model):
     name = models.CharField("Имя", max_length=90)
     middle_name = models.CharField("Отчество", max_length=90, blank=True)
     image = models.ImageField("Фото", upload_to="photo/", null=True, blank=True)
-    experience = models.DateField('Дата начала стажа',)
+    speciality = models.CharField("Специализация", max_length=90, blank=True)
+    # experience = models.DateField('Дата начала стажа',)
     # def get_experience_age(self):
     #     print(elf.experience-date.today()
     #     return self.experience-date.today()
     class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = 'Врач'
+        verbose_name_plural = 'Врачи'
+    def __str__(self):
+        return self.name
 
 class Services(models.Model):
     name = models.CharField("Услуга", max_length=500)
     description = models.TextField('Описание', blank=True)  # описание
     price = models.IntegerField("Стоимость", blank=True)
 
+    class Meta:
+        verbose_name = 'Услуга'
+        verbose_name_plural = 'Услуги'
 
-class Reviews(models.Model):
-    """Отзывы"""
+    def __str__(self):
+        return self.name
+
+class Galery_photo(models.Model):
+    name = models.CharField("Название фото", max_length=500)
+    image = models.ImageField("Изображение", upload_to="photo/")
+
+    class Meta:
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения'
+
+    def __str__(self):
+        return self.name
 

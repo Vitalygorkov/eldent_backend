@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap&subset=cyrillic-ext" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'dentistry/style.css' %}" type="text/css"/>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Стоматология</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="headera">
+        <div class="headera__container">
+            <a href="/" class="headera__logo"><img src="{% static 'dentistry/foto/stomat_elizaveta_logo_white.webp' %}" alt=""></a>
+            <div class="headera__menu menu">
+                <div class="menu__icona">
+                    <span></span>
+                </div>
+                <nav class="menu__bodya">
+                    <ul class="menu__lista">
+                        <li><a href="/about_us" class="menu__linka">Записаться</a></li>
+                        <li><a href="/price" class="menu__linka">Прайс</a></li>
+                        <li><a href="/doctors" class="menu__linka">Специалисты</a></li>
+                        <li><a href="/gallery" class="menu__linka">Галерея</a></li>
+                        <li>
+                            <a href="#bottom" id="top" class="menu__linka">Контакты</a>
+                        </li>
+                        <li>
+                            <div class="menu-tel-box">
+                                <a href="tel:+73812501724" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">83812501724</a>
+                                <a href="tel:+79045841156" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">89045841156</a>
+                            </div>
+                        </li>
+                        <li class="versia"><img id="specialButton" style="cursor:pointer;" src="https://lidrekon.ru/images/special.png" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" />Версия для слабовидящих</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    
+{% block content %}
+{% endblock %}
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__main _container">
+                <div class="footer__column">
+                    <div class="footer__label">
+                        <a href="" class="footer__logo">
+                            <img src="{% static 'dentistry/foto/stomat_elizaveta_logo_white.webp' %}">
+                        </a>
+                    </div>
+                    <nav class="footer__menu menu-footer">
+                        <div class="footer-block__buttons">
+                            <a href="/about_us" class="footer-block__button-footer">перезвоните мне</a>
+                            <a href="/about_us" class="footer-block__button-footer">записаться<br>на консультацию</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="footer__column">
+                    <div class="footer__label">Навигация</div>
+                    <nav class="footer__menu menu-footer">
+                        <ul class="menu-footer__list">
+                            <li class="menu-footer__item"><a href="/about_us" class="menu-footer__link">Записаться</a></li>
+                            <li class="menu-footer__item"><a href="/doctors" class="menu-footer__link">Специалисты</a></li>
+                            <li class="menu-footer__item"><a href="/gallery" class="menu-footer__link">Галерея</a></li>
+                            <li class="menu-footer__item"><a href="/price" class="menu-footer__link">Прайс</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__column">
+                    <a href="#top" id="bottom"><div class="footer__label">Контакты</div></a>
+                    <nav class="footer__menu menu-footer">
+                        <ul class="menu-footer__list">
+                            <div class="menu-tel-box">
+                                <a href="tel:+73812501724" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">83812501724</a>
+                                <a href="tel:+79045841156" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">89045841156</a>
+                            </div>
+                            <li class="menu-footer__item">Россия, г. Омск, ул. 12 Декабря, 56, пом.7<br>пн-пт 9:00–19:00; сб 9:00–17:00</li>
+                        </ul>
+                        <div class="footer__contacts contacts-footer">
+                            <a href="https://vk.com/elizavetastom" class="contacts-footer__item contacts-footer__item_vk">
+                                <img src="{% static 'dentistry/foto/icon-vk.png' %}" alt="">
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+            <script src="{% static 'dentistry/script.js' %}"></script>
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+            <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+</body>
+</html>
