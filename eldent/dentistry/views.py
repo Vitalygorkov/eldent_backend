@@ -22,6 +22,14 @@ def price(request):
     }
     return render(request, 'dentistry/price.html', context)
 
+def kids(request):
+    print('kids')
+    price_list = Services.objects.all()
+    context = {
+        'price_list': price_list,
+    }
+    return render(request, 'dentistry/kids.html', context)
+
 def doctors(request):
     print('doctors')
     doctor_list = Doctor.objects.all()

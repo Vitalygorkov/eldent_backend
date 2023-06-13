@@ -4,6 +4,7 @@
 {% block content %}
 <main class="page">
 
+    
 <div class="page__main-block main-block">
     <div class="main-block__container _container">
         <div class="mine-block__body">
@@ -13,11 +14,17 @@
                 <a href="/about_us" class="main-block__button-blue">Записаться на консультацию</a>
                 <a href="/price" class="main-block__button-light">Прайс</a>
             </div>
+            <div class="kids">
+                <div class="kids-logo"><img src="{% static 'dentistry/foto/tooth-kids.png' %}" alt=""></div>
+                <div class="main-block__buttons">
+                    <a href="/kids" class="main-block__button-blue">Перейти в детский филиал</a>
+                </div>
+            </div>
             <div class="main-block__location">
                 <div class="main-block__location-logo">
                     <img src="{% static 'dentistry/foto/icon-location.png' %}" alt="icon-location">
                 </div>
-                <div class="main-block__location-text"><p>Омск, ул. 12 Декабря, 56, пом.7<br> пн-пт 9:00–19:00; сб 9:00–17:00</p></div>
+                <div class="main-block__location-text"><p>Омск, ул. 12 Декабря 56, пом.7<br> пн-пт 9:00–19:00; сб 9:00–17:00<br>Детская: 12 Декабря 60, пом.83П</p></div>
             </div>
         </div>
     </div>
@@ -53,8 +60,8 @@
                 </div>
                 <div class="about__items">
                     <div class="about__item item-about">
-                        <div class="item-about__icon"> <img src="{% static 'dentistry/foto/sale.png' %}" alt="sale"> </div>
-                        <div class="item-about__text">Мы держим цены на доступном уровне</div>
+                        <div class="item-about__icon"> <img src="{% static 'dentistry/foto/dentist1.png' %}" alt="sale"> </div>
+                        <div class="item-about__text">Лечение зубов у детей и взрослых</div>
                     </div>
                 </div>
             </div>
@@ -83,7 +90,7 @@
                         <a href="/price" class="main-block__button-white">подробнее</a>
                     </div>
                     <a href="" class="item-pract__image _ibg">
-                        <img src="{% static 'dentistry/foto/kabinet1.jpeg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/kabinet1.webp' %}" alt="">
                     </a>
 
                 </article>
@@ -128,13 +135,13 @@
                 <article class="pract__item item-pract">
                     <div class="item-pract__content">
                         <a href="" class="item-pract__link">
-                            <h4 class="item-pract__title">ЗАКАЗАТЬ ЗВОНОК</h4>
+                            <h4 class="item-pract__title">ДЕТСКАЯ СТОМАТОЛОГИЯ</h4>
                         </a>
-                        <div class="item-pract__text">Заказать бесплатный звонок</div>
+                        <div class="item-pract__text">Индивидуальный подход к каждому ребенку</div>
 
                     </div>
                     <div class="main-block__buttons">
-                        <a href="/about_us" class="main-block__button-white">перезвоните мне</a>
+                        <a href="/kids" class="main-block__button-white">детский филиал</a>
                     </div>
                     <a href="" class="item-pract__image _ibg">
                         <img src="{% static 'dentistry/foto/kabinet4.jpeg' %}" alt="">
@@ -222,6 +229,20 @@
     </div>
 </section>
 
+<section class="kids-section">
+    <div class="kids__container _container">
+        <div class="reviews__header header-block">
+            <h2 class="header-block__title-white element-animation">ДЕТСКАЯ СТОМАТОЛОГИЯ</h2>
+            <div class="kids-text">
+                Детская стоматология в клинике «Елизавета» — надежный способ сохранить зубы здоровыми и красивыми! Мы обеспечим индивидуальный подход к каждому ребенку и создадим условия для безболезненного устранения всех проблем.
+            </div>
+            <div class="main-block__buttons-kids">
+                <a href="/kids" class="main-block__button-blue-kids">Перейти в детский филиал</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="reviews">
     <div class="reviews__container _container">
@@ -272,6 +293,12 @@
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af952036cf61375c4aa39c2bea2deb689329a6fafad98609a4b9f7ee1af2664e3&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
 </section>
+
+
+
+
+
+
 
 </main>
         <script src="{% static 'dentistry/slider.js' %}"></script>

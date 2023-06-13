@@ -1,0 +1,27 @@
+{% extends 'dentistry/base.html' %}
+{% load static %}
+{% block content %}
+<br><br><br><br><br><br>
+путь<br>   
+<section class="kids-page">
+    <div class="kids__container _container">
+        <div class="reviews__header header-block">
+            <h2 class="header-block__title-white element-animation">ДЕТСКАЯ СТОМАТОЛОГИЯ</h2>
+            <div class="kids-page-text">
+                Полный комплекс услуг для детей в современной стоматологии «Елизавета»
+            </div>
+            <div class="kids-block__location">
+                <div class="kids-block__location-logo">
+                    <img src="{% static 'dentistry/foto/icon-location.png' %}" alt="icon-location">
+                </div>
+                <div class="kids-block__location-text"><p>Омск, 12 Декабря 60, пом.83П<br> пн-пт 9:00–19:00; сб 9:00–17:00</p></div>
+            </div>
+            <div class="kids-block-tel">    
+                <a href="tel:+79045893851" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">89045893851</a>
+            </div>    
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
