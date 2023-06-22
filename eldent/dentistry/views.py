@@ -37,6 +37,15 @@ def doctors(request):
         'doctor_list': doctor_list,
     }
     return render(request, 'dentistry/doctors.html', context)
+
+def license(request):
+    print('license')
+    doctor_list = Doctor.objects.all()
+    context = {
+        'doctor_list': doctor_list,
+    }
+    return render(request, 'dentistry/license.html', context)
+
 def gallery(request):
     print('gallery')
     photo_list = Galery_photo.objects.all()
