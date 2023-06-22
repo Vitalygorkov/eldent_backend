@@ -22,6 +22,14 @@ def price(request):
     }
     return render(request, 'dentistry/price.html', context)
 
+def kids(request):
+    print('kids')
+    price_list = Services.objects.all()
+    context = {
+        'price_list': price_list,
+    }
+    return render(request, 'dentistry/kids.html', context)
+
 def doctors(request):
     print('doctors')
     doctor_list = Doctor.objects.all()
@@ -29,6 +37,15 @@ def doctors(request):
         'doctor_list': doctor_list,
     }
     return render(request, 'dentistry/doctors.html', context)
+
+def license(request):
+    print('license')
+    doctor_list = Doctor.objects.all()
+    context = {
+        'doctor_list': doctor_list,
+    }
+    return render(request, 'dentistry/license.html', context)
+
 def gallery(request):
     print('gallery')
     photo_list = Galery_photo.objects.all()

@@ -1,0 +1,122 @@
+{% extends 'dentistry/base.html' %}
+{% load static %}
+{% block content %} 
+<div class="kids-kids">
+    <div class="way-box _container">
+
+        <div class="category_path">
+            <a href="/">Главная</a>
+        </div>
+
+        <div class="category_path">
+            <img src="{% static 'dentistry/foto/right-arrow.png' %}" alt="">
+            <a href="#">Детская стоматология</a>
+        </div>
+    </div>
+
+    <section class="kids-page">
+        <div class="kids__container _container">
+            <div class="reviews__header header-block">
+                <h2 class="header-block__title-kids element-animation">ДЕТСКАЯ СТОМАТОЛОГИЯ</h2>
+                <div class="kids-page-text">
+                    Полный комплекс услуг для детей в современной стоматологии «Елизавета»
+                </div>
+                <div class="kids-block__location">
+                    <div class="kids-block__location-logo">
+                        <img src="{% static 'dentistry/foto/icon-location.png' %}" alt="icon-location">
+                    </div>
+                    <div class="kids-block__location-text"><p>Омск, 12 Декабря 60, пом.83П<br> пн-пт 9:00–19:00; сб 9:00–17:00</p></div>
+                </div>
+                <div class="kids-block-tel">    
+                    <a href="tel:+79045893851" class="menu__linka"><img src="{% static 'dentistry/foto/phone-stom.png' %}" alt="">89045893851</a>
+                </div>    
+            </div>
+        </div>
+    </section>
+
+    <div class="kids-description _container">
+        <div class="kids-description-block element-animation">
+            <div class="kids-description-img"><img src="{% static 'dentistry/foto/bunny-1.png' %}" alt=""></div>
+            <div class="kids-description-text">Высококвалифицированные стоматологи детской «Елизаветы» выполняют различные манипуляции как у детей, так и у взрослых: от терапевтического лечения (снятие острой боли, лечение пульпита, лечение корневых каналов зубов, пломбировка каналов и зубов) до хирургических вмешательств.</div>
+        </div>
+        <div class="kids-description-block element-animation">
+            <div class="kids-description-text">Для маленьких пациентов врач рассказывает как правильно чистить зубы, пользоваться зубной щеткой. Также доктор консультирует родителей: как помочь ребенку соблюдать гигиену полости рта, правильно ухаживать за деснами. </div>
+            <div class="kids-description-img"><img src="{% static 'dentistry/foto/bunny-2.png' %}" alt=""></div>
+        </div>
+        <div class="kids-description-block element-animation">
+            <div class="kids-description-img"><img src="{% static 'dentistry/foto/bunny-3.png' %}" alt=""></div>
+            <div class="kids-description-text">Врач может провести профессиональную «чистку» полости рта – снятие налета с зубов, закрытие фиссур, придание им меньшей уязвимости, а также покрытие специальным защитным средством.</div>
+        </div>
+        <div class="kids-description-block element-animation">
+            <div class="kids-description-text">В детской «Елизавете» знают, как сделать так, чтобы ребенок не просто перестал бояться встречи с зубным врачом, а шел на прием с улыбкой.</div>
+            <div class="kids-description-img"><img src="{% static 'dentistry/foto/bunny-4.png' %}" alt=""></div>
+        </div>
+    </div>
+
+
+    <div class="galery">
+        <div class="slideshow-container">
+            {% for photo in photo_list %}
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <!-- <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> -->
+                    <img src="/media/{{ photo.image }}" style="width:100%">
+                </div>
+            {% endfor %}
+
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+                <br>
+        <div style="text-align:center">
+                {% for photo in photo_list %}
+                <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+                {% endfor %}
+        </div>
+    </div>
+
+    <h2 class="kids-block__title-kids">Обратная связь и запись на прием</h2>
+
+    <section class="popup">
+
+
+
+
+            <div class="container-popup _container">
+                    <div class="popWindow subscribe_window">
+                        <p class="subcsribe-text">Заполните заявку<br>
+                            Для того, чтобы мы с вами связались!</p>
+                        <form class="subscribe-form" autocomplete="off">
+                        <div>
+                            <input type="text" id="name-subscribe" name="Name" placeholder=" " required>
+                            <label for="name-subscribe">ФИО<span>*</span></label>
+                        </div>
+                        <div>
+                            <input type="email" id="email-subscribe" name="E-mail" placeholder=" " required>
+                            <label for="email-subscribe">Эл. почта<span>*</span></label>
+                        </div>
+                        <div>
+                            <input type="tel" id="tel-subscribe" name="tel" placeholder=" " required>
+                            <label for="tel-subscribe">Телефон<span>*</span></label>
+                        </div>
+                        <div class="aligncenter">
+                            <button type="submit" class="btn"><i class="fa fa-check" aria-hidden="true"></i>Отправить</button>
+                        </div>
+                        <div class="req-fields"><sup>*</sup> обязательное поле</div>
+                        </form>
+
+                        <div class="main-block__buttons _container">
+                            <a href="/" class="main-block__button-white">НАЗАД</a>
+                        </div>
+
+                    </div>
+
+
+            </div>
+    </section>
+</div>
+
+
+
+{% endblock %}
