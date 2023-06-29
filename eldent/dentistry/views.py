@@ -48,7 +48,7 @@ def contact_view(request):
             content = 'ФИО: ' + fio + " Телефон: " + phone + ' Е-мейл: ' + email_address
             try:
                 print('отправка письма')
-                send_mail(subject, content, 'auto-message@elizaveta-dent55.ru', ['clients@elizaveta-dent55.ru'], fail_silently=False,)
+                send_mail(subject, content, 'auto-message@elizaveta-dent55.ru', ['clients@elizaveta-dent55.ru', 'liza.stomatologiya@mail.ru'], fail_silently=False,)
                 # send_mail(f'{subject} от {from_email}', message,
                 #           DEFAULT_FROM_EMAIL, RECIPIENTS_EMAIL)
             except BadHeaderError:
