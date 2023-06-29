@@ -1,5 +1,5 @@
 from django import forms
-from captcha.fields import ReCaptchaField
+# from captcha.fields import ReCaptchaField
 # from captcha.widgets import ReCaptchaV3
 # from captcha.widgets import ReCaptchaV2Checkbox
 from snowpenguin.django.recaptcha3.fields import ReCaptchaField
