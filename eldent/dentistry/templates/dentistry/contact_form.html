@@ -1,0 +1,59 @@
+{% extends 'dentistry/base.html' %}
+{% load static %}
+{% block content %}
+{% load static recaptcha3 %}
+
+<section class="popup">
+
+    <div class="way-box _container">
+
+        <div class="category_path">
+            <a href="/">Главная</a>
+        </div>
+
+        <div class="category_path">
+            <img src="{% static 'dentistry/foto/right-arrow.png' %}" alt="">
+            <a href="#">Записаться на консультацию</a>
+        </div>
+    </div>
+
+    {% recaptcha_init %}
+    {% recaptcha_ready action_name='contact' %}
+        <div class="container-popup _container">
+                <div class="popWindow subscribe_window">
+                    <p class="subcsribe-text">Заполните заявку<br>
+                        Для того, чтобы мы с вами связались!</p>
+                    <form class="subscribe-form" autocomplete="off" method="post">
+                        {% csrf_token %}
+                    <div>
+                        <input type="hidden" name="name" value="name">
+                        <input type="text" id="name-subscribe" name="fio" placeholder=" " required>
+                        <label for="name-subscribe">ФИО<span>*</span></label>
+                    </div>
+                    <div>
+                        <input type="email" id="email-subscribe" name="email_address" placeholder=" " required>
+                        <label for="email-subscribe">Эл. почта<span>*</span></label>
+                    </div>
+                    <div>
+                        <input type="tel" id="tel-subscribe" name="phone" placeholder=" " required>
+                        <label for="tel-subscribe">Телефон<span>*</span></label>
+                    </div>
+                    <div class="aligncenter">
+                        aa{{ form.captcha }}aa
+                        <button type="submit" class="btn"><i class="fa fa-check" aria-hidden="true"></i>Отправить</button>
+                    </div>
+                    <div class="req-fields"><sup>*</sup> обязательное поле</div>
+                    </form>
+
+                    <div class="main-block__buttons _container">
+                        <a href="/" class="main-block__button-white">НАЗАД</a>
+                     </div>
+
+                </div>
+
+
+        </div>
+</section>
+
+
+{% endblock %}

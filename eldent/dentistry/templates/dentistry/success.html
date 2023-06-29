@@ -1,0 +1,39 @@
+{% extends 'dentistry/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<section class="popup">
+
+    <div class="way-box _container">
+
+        <div class="category_path">
+            <a href="/">Главная</a>
+        </div>
+
+        <div class="category_path">
+            <img src="{% static 'dentistry/foto/right-arrow.png' %}" alt="">
+            <a href="#">Записаться на консультацию</a>
+        </div>
+    </div>
+
+
+        <div class="container-popup _container">
+                <div class="popWindow subscribe_window">
+                    <p class="subcsribe-text">Спасибо! Ваша заявка отправлена!<br>
+                        Мы вам обязательно перезвоним!</p>
+
+
+                    <div class="main-block__buttons _container">
+                        <a href="/" class="main-block__button-white">НАЗАД</a>
+                     </div>
+
+                </div>
+
+
+        </div>
+</section>
+
+
+{% endblock %}
