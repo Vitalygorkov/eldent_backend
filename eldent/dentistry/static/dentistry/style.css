@@ -39,6 +39,10 @@ body {
 body._lock{
     overflow: hidden; /*недает скролить весь сайт при открытой меню*/
 }
+
+.license-img{
+    max-width: 98%;
+}
 .wrapper {
     min-height: 100%;
     overflow: hidden;
