@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="main-block__image _ibg">
-        <img src="{% static 'dentistry/foto/avafon.jpg' %}" alt="ava">
+        <img src="{% static 'dentistry/foto/avafon.webp' %}" alt="ava">
     </div>
     <div class="main-block__image1"></div>
 </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="about__body">
             <div class="about__image">
-                <img src="{% static 'dentistry/foto/entrance.JPG' %}" alt="about">
+                <img src="{% static 'dentistry/foto/entrance.webp' %}" alt="about">
             </div>
             <div class="about__content element-animation">
                 <h2 class="about__title">Мы посвящаем себя <br> вашей улыбке!</h2>
@@ -108,7 +108,7 @@
                         <a href="/price" class="main-block__button-white">подробнее</a>
                     </div>
                     <a href="" class="item-pract__image _ibg">
-                        <img src="{% static 'dentistry/foto/kabinet2.jpeg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/kabinet2.webp' %}" alt="">
                     </a>
 
                 </article>
@@ -126,7 +126,7 @@
                         <a href="/price" class="main-block__button-white">подробнее</a>
                     </div>
                     <a href="" class="item-pract__image _ibg">
-                        <img src="{% static 'dentistry/foto/kabinet3.jpeg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/kabinet3.webp' %}" alt="">
                     </a>
 
                 </article>
@@ -144,7 +144,7 @@
                         <a href="/kids" class="main-block__button-white">детский филиал</a>
                     </div>
                     <a href="" class="item-pract__image _ibg">
-                        <img src="{% static 'dentistry/foto/kabinet4.jpeg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/kabinet4.webp' %}" alt="">
                     </a>
 
                 </article>
@@ -154,27 +154,27 @@
 </section>
 
 
-<div class="galery">
-    <div class="slideshow-container">
-        {% for photo in photo_list %}
-            <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <!-- <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> -->
-                <img src="/media/{{ photo.image }}" style="width:100%">
-            </div>
-        {% endfor %}
+<!--<div class="galery">-->
+<!--    <div class="slideshow-container">-->
+<!--        {% for photo in photo_list %}-->
+<!--            <div class="mySlides">-->
+<!--                <div class="numbertext">1 / 6</div>-->
+<!--                &lt;!&ndash; <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> &ndash;&gt;-->
+<!--                <img src="/media/{{ photo.image }}" style="width:100%">-->
+<!--            </div>-->
+<!--        {% endfor %}-->
 
 
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-    </div>
-            <br>
-    <div style="text-align:center">
-            {% for photo in photo_list %}
-            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
-            {% endfor %}
-    </div>
-</div>
+<!--            <a class="prev" onclick="plusSlides(-1)">❮</a>-->
+<!--            <a class="next" onclick="plusSlides(1)">❯</a>-->
+<!--    </div>-->
+<!--            <br>-->
+<!--    <div style="text-align:center">-->
+<!--            {% for photo in photo_list %}-->
+<!--            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>-->
+<!--            {% endfor %}-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <section class="doctor doctor">
@@ -253,32 +253,32 @@
             <div class="reviews-box">
                 <div class="reviews-card">
                     <div class="reviews-photo__image">
-                        <img src="{% static 'dentistry/foto/otziv1.jpg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/otziv1.webp' %}" alt="">
                     </div>
                 </div>
                 <div class="reviews-card">
                     <div class="reviews-photo__image">
-                        <img src="{% static 'dentistry/foto/otziv2.jpg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/otziv2.webp' %}" alt="">
                     </div>
                 </div>
                 <div class="reviews-card">
                     <div class="reviews-photo__image">
-                        <img src="{% static 'dentistry/foto/otziv3.jpg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/otziv3.webp' %}" alt="">
                     </div>
                 </div>
                 <div class="reviews-card">
                     <div class="reviews-photo__image">
-                        <img src="{% static 'dentistry/foto/otziv4.jpg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/otziv4.webp' %}" alt="">
                     </div>
                 </div>
                 <div class="reviews-card">
                     <div class="reviews-photo__image">
-                        <img src="{% static 'dentistry/foto/otziv5.jpg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/otziv5.webp' %}" alt="">
                     </div>
                 </div>
                 <div class="reviews-card">
                     <div class="reviews-photo__image">
-                        <img src="{% static 'dentistry/foto/otziv6.jpg' %}" alt="">
+                        <img src="{% static 'dentistry/foto/otziv6.webp' %}" alt="">
                     </div>
                 </div>
             </div>
