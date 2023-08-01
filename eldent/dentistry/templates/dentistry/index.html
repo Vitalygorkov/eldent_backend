@@ -154,27 +154,27 @@
 </section>
 
 
-<!--<div class="galery">-->
-<!--    <div class="slideshow-container">-->
-<!--        {% for photo in photo_list %}-->
-<!--            <div class="mySlides">-->
-<!--                <div class="numbertext">1 / 6</div>-->
-<!--                &lt;!&ndash; <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> &ndash;&gt;-->
-<!--                <img src="/media/{{ photo.image }}" style="width:100%">-->
-<!--            </div>-->
-<!--        {% endfor %}-->
+<div class="galery">
+    <div class="slideshow-container">
+        {% for photo in photo_list %}
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <!-- <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> -->
+                <img src="/media/{{ photo.image }}" style="width:100%">
+            </div>
+        {% endfor %}
 
 
-<!--            <a class="prev" onclick="plusSlides(-1)">❮</a>-->
-<!--            <a class="next" onclick="plusSlides(1)">❯</a>-->
-<!--    </div>-->
-<!--            <br>-->
-<!--    <div style="text-align:center">-->
-<!--            {% for photo in photo_list %}-->
-<!--            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>-->
-<!--            {% endfor %}-->
-<!--    </div>-->
-<!--</div>-->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+            <br>
+    <div style="text-align:center">
+            {% for photo in photo_list %}
+            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+            {% endfor %}
+    </div>
+</div>
 
 
 <section class="doctor doctor">
