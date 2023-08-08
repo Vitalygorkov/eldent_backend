@@ -1495,3 +1495,19 @@ body._touch .menu__lista > li._active .menu__arrowa {
     display: flex;
     flex-wrap: wrap;
 }
+.reviews-box{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.reviews-card{
+}
+.reviews-photo__image{
+min-width: 300px;
+max-height: 700px;
+max-width: 350px;
+}
+.reviews-photo__image img{
+max-height: 100%;
+max-width: 100%;
+}
