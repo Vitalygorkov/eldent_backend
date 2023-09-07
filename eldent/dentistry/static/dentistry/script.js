@@ -100,6 +100,7 @@ $(window).load(function() {
 
 
 
+
 /*-----------меню---новое---------*/
 const isMobile = {
   Android: function () {
