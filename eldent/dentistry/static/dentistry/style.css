@@ -1511,3 +1511,12 @@ max-width: 350px;
 max-height: 100%;
 max-width: 100%;
 }
+
+.kids-description-block{
+display: flex;
+margin: 5%;
+}
+
+.kids-description-img img{
+max-width: 100%;
+}
