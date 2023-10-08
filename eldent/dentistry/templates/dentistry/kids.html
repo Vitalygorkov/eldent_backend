@@ -2,6 +2,11 @@
 {% load static %}
 {% block content %} 
 <div class="kids-kids">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="way-box _container">
 
         <div class="category_path">
@@ -16,7 +21,7 @@
 
     <section class="kids-page">
         <div class="kids__container _container">
-            <div class="reviews__header header-block">
+            <div class="kids__header header-block">
                 <h2 class="header-block__title-kids element-animation">ДЕТСКАЯ СТОМАТОЛОГИЯ</h2>
                 <div class="kids-page-text">
                     Полный комплекс услуг для детей в современной стоматологии «Елизавета»
@@ -53,35 +58,39 @@
         </div>
     </div>
 
-
-    <div class="galery">
-        <div class="slideshow-container">
-            {% for photo in photo_list %}
-                <div class="mySlides">
-                    <div class="numbertext">1 / 6</div>
-                    <!-- <img src="{% static 'dentistry/foto/card3.jpg' %}" style="width:100%"> -->
-                    <img src="/media/{{ photo.image }}" style="width:100%">
-                </div>
-            {% endfor %}
-
-
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="kids-gallery _container">
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/administrator.png' %}" alt="">
         </div>
-                <br>
-        <div style="text-align:center">
-                {% for photo in photo_list %}
-                <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
-                {% endfor %}
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/aquarium.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/children.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/entrance.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/hospital.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/mode.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/tootha.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/treatment.png' %}" alt="">
+        </div>
+        <div class="kids-gallery-card">
+            <img src="{% static 'dentistry/foto/window.png' %}" alt="">
         </div>
     </div>
 
     <h2 class="kids-block__title-kids">Обратная связь и запись на прием</h2>
 
     <section class="popup">
-
-
-
 
             <div class="container-popup _container">
                     <div class="popWindow subscribe_window">
@@ -116,7 +125,6 @@
             </div>
     </section>
 </div>
-
 
 
 {% endblock %}

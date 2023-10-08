@@ -1482,6 +1482,11 @@ body._touch .menu__lista > li._active .menu__arrowa {
     padding: 80px 0px 80px 0px;
     background-image: linear-gradient(90deg, #b1d3dc, #76b1c1)
 }
+@media (max-width: 770px){
+    .reviews {
+        padding: 10px 0px 10px 0px;
+    }
+}
 @media (max-width: 430px){
     .pract {
         padding: 30px 0px 30px 0px;
@@ -1498,25 +1503,326 @@ body._touch .menu__lista > li._active .menu__arrowa {
 .reviews-box{
 display: flex;
 flex-direction: row;
-flex-wrap: wrap;
+flex-flow: wrap;
+justify-content: center;
 }
-.reviews-card{
+.reviews-card img{
+    width: 100%;
 }
-.reviews-photo__image{
-min-width: 300px;
-max-height: 700px;
-max-width: 350px;
+.reviews-card {
+    width: 180px;
+    height: 250px;
+    margin: 10px 10px;
 }
-.reviews-photo__image img{
-max-height: 100%;
-max-width: 100%;
+/* детское на главной и страница */
+.kids-section{
+    background-image: url('foto/kids-ava.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
-
+.kids-text{
+    color: #ffffff;
+    width: 700px;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+@media (max-width: 1200px){
+    .kids-text {
+        width: 600px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 1050px){
+    .kids-text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 890px){
+    .kids-text {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 18px;
+        width: 500px;
+    }
+}
+@media (max-width: 690px){
+    .kids-text {
+        display: none;
+    }
+}
+.main-block__button-blue-kids {
+    text-decoration: none;
+    display: inline-block;
+    width: 335px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 400;
+    color: #fdfdfd;
+    background: #2C7BB1;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.404);
+    transition: .3s;
+}
+.main-block__button-blue-kids:hover {
+    background: #fcfcfc;
+    box-shadow: 0 15px 20px rgba(4, 215, 252, 0.445);
+    color: rgb(0, 0, 0);
+    transform: translateY(-7px);
+}
+@media (max-width: 690px){
+    .main-block__button-blue-kids {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 440px){
+    .main-block__button-blue-kids {
+        width: 300px;
+        height: 45px;
+        line-height: 45px;
+        margin-top: 150px;
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+}
+@media (max-width: 430px){
+    .main-block__button-blue-kids {
+        margin-top: 110px;
+    }
+}
+@media (max-width: 320px){
+    .main-block__button-blue-kids {
+        margin-top: 50px; 
+    }
+}
+.kids__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+@media (max-width: 1200px){
+    .kids__header {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 980px){
+    .kids__header {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 700px){
+    .kids__header {
+        padding-top: 5px;
+    }
+}
+@media (max-width: 690px){
+    .kids__header {
+        padding-top: 0px;
+        padding-bottom: 60px;
+    }
+}
+@media (max-width: 440px){
+    .kids__header {
+        align-items: center;
+    }
+}
+@media (max-width: 580px){
+    .kids__header {
+        padding-bottom: 0px;
+    }
+}
+.kids-page{
+    background-image: url('foto/dent-ava-kids-n.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.header-block__title-kids{
+    color: #4c4c4c;
+    padding: 30px;
+    font-weight: bold;
+}
+@media (max-width: 770px){
+    .header-block__title-kids {
+        font-weight: 300px;
+        font-size: 25px;
+    }
+}
+@media (max-width: 500px){
+    .header-block__title-kids {
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 430px){
+    .header-block__title-kids {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+}
+@media (max-width: 380px){
+    .header-block__title-kids {
+        padding: 3px 3px;
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+}
+.kids-page-text{
+    color: #4c4c4c;
+    font-size: 20px;
+    width: 750px;
+}
+@media (max-width: 1025px){
+    .kids-page-text {
+        width: 600px;
+    }
+}
+@media (max-width: 770px){
+    .kids-page-text {
+        width: 500px;
+    }
+}
+@media (max-width: 630px){
+    .kids-page-text {
+        width: 320px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 335px){
+    .kids-page-text {
+        font-size: 14px;
+    }
+}
+.kids-block__location{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+@media (max-width: 580px){
+    .kids-block__location {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 430px){
+    .kids-block__location {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+}
+.kids-block__location-logo img{
+    width: 60%;
+}
+.kids-block__location-text p{
+    margin-bottom: 3px;
+}
+.kids-block-tel a{
+    font-size: 20px;
+}
+.kids-block-tel {
+    padding-bottom: 30px;
+}
+@media (max-width: 380px){
+    .kids-block-tel a {
+        font-size: 18px;
+    }
+}
+@media (max-width: 630px){
+    .kids__header {
+       display: flex;
+       flex-direction: column;
+       align-items: start;
+    }
+}
 .kids-description-block{
-display: flex;
-margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
+@media (max-width: 600px){
+    .kids-description-block {
+        margin-top: 20px;
+    }
+}
 .kids-description-img img{
-max-width: 100%;
+    max-width: 200px;
+}
+@media (max-width: 600px){
+    .kids-description-img img {
+        max-width: 150px;
+    }
+}
+@media (max-width: 460px){
+    .kids-description-img img {
+        max-width: 100px;
+    }
+}
+@media (max-width: 380px){
+    .kids-description-img img {
+        max-width: 80px;
+    }
+}
+.kids-description-text{
+    margin: 0 30px;
+    font-size: 18px;
+    text-align: justify;
+}
+@media (max-width: 600px){
+    .kids-description-text {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
+@media (max-width: 430px){
+    .kids-description-text {
+        font-size: 15px;
+        margin: 0 5px;
+        line-height: 17px;
+    }
+}
+.kids-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.kids-gallery-card {
+    width: 30%;
+    width: 380px;
+    height: 220px;
+    margin: 10px 10px;
+}
+@media (max-width: 380px){
+    .kids-gallery-card {
+        height: 180px; 
+    }
+}
+@media (max-width: 320px){
+    .kids-gallery-card {
+        height: 140px; 
+    }
+}
+.kids-gallery-card img {
+    width: 100%;
 }

@@ -2,9 +2,33 @@
 {% load static %}
 {% block content %}
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="way-box _container">
+
+    <div class="category_path">
+        <a href="/">Главная</a>
+    </div>
+
+    <div class="category_path">
+        <img src="{% static 'dentistry/foto/right-arrow.png' %}" alt="">
+        <a href="#">Лицензия</a>
+    </div>
+
+</div>
+
 <div class="license _container">
     <div class="license-img-block"><img class="license-img" src="{% static 'dentistry/foto/license1.jpeg' %}" alt=""></div>
+    <br>
     <div class="license-img-block"><img class="license-img" src="{% static 'dentistry/foto/license2.jpeg' %}" alt=""></div>
+</div>
+<br>
+
+<div class="main-block__buttons ">
+    <a href="/price" class="main-block__button-big">НАЗАД</a>
 </div>
 
 {% endblock %}
